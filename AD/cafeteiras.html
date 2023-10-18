@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Espuma era a Lei</title>
+    <base target="_blank" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla|Stoke"
+      rel="stylesheet"
+    </link>
+    <style>
+      /* Adicione estilos CSS aqui para as janelas pop-up */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .popup img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <address class="ender">
+        Via Expressa, 126<br />
+        Tel: (21) 91122-3344<br />
+        <a href="mailto:contato@espumeralei.com.br">contato@espumeralei.com.br</a>
+      </address>
+      <img class="imgLogo" src="assets/EspumaEraLeiTopo.png" /><br />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Apresentação</a></li>
+        <li><a href="cafeteiras.html">Cafeteiras</a></li>
+        <li><a href="capsulas.html">Cápsulas</a></li>
+        <li><a href="form.html">Pedidos</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h3 class="Titulo">Cafeteiras</h3>
+      <ol class="listaMaq">
+        <li><a href="miniSe.html" class="product-link">Mini ME</a></li>
+        <li><a href="genioPlus.html" class="product-link">Genio S Plus</a></li>
+        <li><a href="inissia.html" class="product-link">Inissia</a></li>
+        <li><a href="lov.html" class="product-link">LOV</a></li>
+      </ol>
+    </section>
+
+    <div class="popup" id="product-popup">
+      <h2 id="popup-title">Product Title</h2>
+      <img id="popup-image" src="product_image.jpg" alt="Product Image" />
+      <p id="popup-capsule">Type of Capsule</p>
+      <p id="popup-price">Price: $X.XX</p>
+      <button id="close-popup">Fechar</button>
+    </div>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const productLinks = document.querySelectorAll(".product-link");
+        const productPopup = document.getElementById("product-popup");
+        const popupTitle = document.getElementById("popup-title");
+        const popupImage = document.getElementById("popup-image");
+        const popupCapsule = document.getElementById("popup-capsule");
+        const popupPrice = document.getElementById("popup-price");
+        const closePopupButton = document.getElementById("close-popup");
+
+        productLinks.forEach((link, index) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const productData = getProductData(index); 
+            popupTitle.textContent = productData.title;
+            popupImage.src = productData.image;
+            popupCapsule.textContent = `Type of Capsule: ${productData.capsule}`;
+            popupPrice.textContent = `Price: $${productData.price.toFixed(2)}`;
+            productPopup.style.display = "block";
+          });
+        });
+
+        closePopupButton.addEventListener("click", () => {
+          productPopup.style.display = "none";
+        });
+      });
+
+      function getProductData(index) {
+        const products = [
+          {
+            title: "Mini ME",
+            image: "mini_me.jpg",
+            capsule: "Capsule Type A",
+            price: 49.99,
+          },
+          {
+            title: "Genio S Plus",
+            image: "genio_s_plus.jpg",
+            capsule: "Capsule Type B",
+            price: 79.99,
+          },
+          {
+            title: "Inissia",
+            image: "inissia.jpg",
+            capsule: "Capsule Type A",
+            price: 59.99,
+          },
+          {
+            title: "LOV",
+            image: "lov.jpg",
+            capsule: "Capsule Type C",
+            price: 69.99,
+          },
+        ];
+        return products[index];
+      }
+    </script> -->
+  </body>
+</html>
+
